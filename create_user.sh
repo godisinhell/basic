@@ -45,17 +45,6 @@ go install -v github.com/tomnomnom/waybackurls@latest
 CGO_ENABLED=1 go install github.com/projectdiscovery/katana/cmd/katana@latest
 
 
-CONFIG_SRC="config-files/.gau.toml"
-CONFIG_DEST="/root/.gau.toml"
-cp "$CONFIG_SRC" "$CONFIG_DEST"
-
-read -r -p "Enter your URLScan.io API key: " URLSCAN_API_KEY
-
-sed -i "s|apikey = \"\$1\"|apikey = \"${URLSCAN_API_KEY}\"|" "$CONFIG_DEST"
-
-echo "🔑  API key written to $CONFIG_DEST"
-
-
 # Copy Go binaries to /bin
 sudo cp /home/$USERNAME/go/bin/* /bin
 EOF
