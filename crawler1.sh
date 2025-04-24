@@ -9,7 +9,7 @@ check_command() {
 }
 
 # Check for required tools
-for cmd in gau hakrawler waybackurls; do
+for cmd in gau hakrawler waybackurls katana; do
     check_command "$cmd"
 done
 

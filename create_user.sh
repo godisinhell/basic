@@ -42,6 +42,7 @@ go install -v github.com/lc/gau/v2/cmd/gau@latest
 go install -v github.com/hakluke/hakrawler@latest
 go install -v github.com/Emoe/kxss@latest
 go install -v github.com/tomnomnom/waybackurls@latest
+CGO_ENABLED=1 go install github.com/projectdiscovery/katana/cmd/katana@latest
 
 # Copy Go binaries to /bin
 sudo cp /home/$USERNAME/go/bin/* /bin
