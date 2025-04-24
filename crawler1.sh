@@ -34,8 +34,8 @@ hakrawler_output="hakrawler_output.txt"
 wayback_output="wayback_output.txt"
 katana_output="katana_output.txt"
 merged_output="merged_output.txt"
-unique_urls="${url}-urls.txt"
-static_files="${url}-static_files.txt"
+unique_urls="uniq-urls.txt"
+static_files="static-urls.txt"
 
 # Run tools and save outputs to respective files
 echo "$url" | gau > "$gau_output"
