@@ -20,7 +20,6 @@ if [ -z "$1" ]; then
 fi
 
 url="$1"
-domain="$2"
 
 # Validate URL format
 if ! [[ "$url" =~ ^https?:// ]]; then
@@ -35,8 +34,8 @@ hakrawler_output="hakrawler_output.txt"
 wayback_output="wayback_output.txt"
 katana_output="katana_output.txt"
 merged_output="merged_output.txt"
-unique_urls="${domain}-urls.txt"
-static_files="${domain}-static_files.txt"
+unique_urls="${url}-urls.txt"
+static_files="${url}-static_files.txt"
 
 # Run tools and save outputs to respective files
 echo "$url" | gau > "$gau_output"
